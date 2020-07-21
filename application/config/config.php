@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/Resume-Builder-APP';
+$config['base_url'] = 'http://localhost/Resume-Builder-APP/';
 
 /*
 |--------------------------------------------------------------------------
@@ -324,7 +324,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = md5('resumebuilde');
+$config['encryption_key'] = hash('md5','resumebuilder');
 
 /*
 |--------------------------------------------------------------------------
@@ -449,11 +449,11 @@ $config['global_xss_filtering'] = FALSE;
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
 $config['csrf_protection'] = TRUE;
-$config['csrf_token_name'] = 'resumebuilder_csrf_token';
-$config['csrf_cookie_name'] = 'resumebuilder_cookie_token';
+$config['csrf_token_name'] = 'resume_builder_token';
+$config['csrf_cookie_name'] = 'resume_builder_app_id';
 $config['csrf_expire'] = 7200;
 $config['csrf_regenerate'] = TRUE;
-$config['csrf_exclude_uris'] = array();
+$config['csrf_exclude_uris'] = array('api/v1/resume/get','api/v1/resume/save','api/v1/resume/lang/remove','api/v1/resume/edu/remove','api/v1/resume/exp/remove');
 
 /*
 |--------------------------------------------------------------------------
